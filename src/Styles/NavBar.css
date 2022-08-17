@@ -23,7 +23,8 @@ a {
   align-items: center;
   justify-content: space-around;
   height: 8vh;
-  background: rgb(12, 2, 74);
+  background: rgb(73, 153, 218);
+  color: white;
 }
 .nav__brand {
   text-transform: uppercase;
@@ -58,7 +59,7 @@ a {
     right: 0;
     height: 93vh;
     width: 50vw;
-    background: rgb(5, 26, 47);
+    background: rgb(236, 240, 243);
     flex-direction: column;
     transform: translateX(100%);
     transition: 0.5s ease-in;
@@ -78,3 +79,4 @@ a {
 .toggle .line3 {
   transform: rotate(45deg) translate(-4px, -5px);
 }
+

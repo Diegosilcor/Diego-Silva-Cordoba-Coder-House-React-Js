@@ -16,38 +16,44 @@ function Navbar() {
   };
   return (
     <nav className="nav">
-      <a href="#" className="nav__brand">
-        Radar Flight
+    Radar Flight
+      <a href="https://www.linkedin.com/in/diego-ignacio-silva-cordoba" className="nav__brand">
       </a>
       <ul className={active}>
         <li className="nav__item">
-          <a href="#" className="nav__link">
+          <a href="https://www.linkedin.com/in/diego-ignacio-silva-cordoba" className="nav__link">
             Home
           </a>
         </li>
         <li className="nav__item">
-          <a href="#" className="nav__link">
+          <a href="https://www.linkedin.com/in/diego-ignacio-silva-cordoba" className="nav__link">
             Sobre nosotros
           </a>
         </li>
         <li className="nav__item">
-          <a href="#" className="nav__link">
+          <a href="https://www.linkedin.com/in/diego-ignacio-silva-cordoba" className="nav__link">
             Vuelos
           </a>
         </li>
         <li className="nav__item">
-          <a href="#" className="nav__link">
+          <a href="https://www.linkedin.com/in/diego-ignacio-silva-cordoba" className="nav__link">
             Contacto
           </a>
         </li>
       </ul>
+
       <div onClick={navToggle} className={icon}>
         <div className="line1"></div>
         <div className="line2"></div>
         <div className="line3"></div>
       </div>
+    <span className="material-icons">shopping_cart</span> 
     </nav>
+    
   );
 }
+
+
+
 
 export default Navbar;
