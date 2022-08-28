@@ -1,0 +1,64 @@
+.count-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.count-container__contador {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr 1fr;
+  width: 140px;
+  height: 50px;
+  font-weight: 600;
+  font-size: 2.0rem;
+  margin: 40px auto 0;
+}
+
+.count-container__button {
+  color: rgb(18, 3, 3);
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgb(12, 11, 14);
+  font-size: 2.0rem;
+  transition: all 250ms ease-out;
+}
+
+.count-container__button:hover {
+  border: none;
+  color: rgb(23, 22, 22);
+  background-color: rgb(66, 190, 225);
+}
+
+.count-container__button[disabled] {
+  color: rgb(9, 9, 9);
+  border: 2px solid rgb(12, 11, 14);
+  background-color: transparent;
+  border: 1px solid rgb(14, 14, 14);
+}
+
+.count-container__qty {
+  text-align: center;
+  height: 100%;
+  padding-top: 10px;
+  color:  rgb(234, 219, 7);
+  background-color: rgb(1, 1, 8);
+}
+
+
+button {
+  border: none;
+  background: none;
+}
+
+.button-primary {
+  background-color: rgb(214, 170, 9);
+  border-radius: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  font-size: 2rem;
+  margin: 20px auto;
+  width: 112px;
+  height: 36px;
+  cursor: pointer;
+}
