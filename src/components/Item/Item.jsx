@@ -1,11 +1,18 @@
 import React from 'react';
 import ItemCount from '../ItemCount/ItemCount';
+import Swal from 'sweetalert2';
 import '../Item/Item.css';
 
 
 const Item = ({ name, image, price, id, stock }) => {
   const onAdd = (qty) => {
-    alert(`Has agregado ${qty} remera de aviones`);
+  Swal.fire({
+  icon: 'success',    
+  title: 'Radar Flight',
+  text: `Has agregado ${qty} remera de aviones`,
+  confirmButtonText: 'Genial',
+
+})
   };
 
   return (
