@@ -1,7 +1,7 @@
 import React from "react";
 import "../CardWidget/CartWidget.css"
 
-const CartWidget = () => {
+const CardWidget = () => {
   
   return (
       <div className="cart-widget">
@@ -10,4 +10,4 @@ const CartWidget = () => {
   );
 };
 
-export default CartWidget;
+export default CardWidget;

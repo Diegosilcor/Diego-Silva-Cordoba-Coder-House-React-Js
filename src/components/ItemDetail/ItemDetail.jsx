@@ -1,43 +1,32 @@
-import React from 'react';
-import ItemCount from '../ItemCount/ItemCount';
-import Swal from 'sweetalert2';
-import './ItemDetail.css';
+import ItemCount from "../ItemCount/ItemCount";
+import "./ItemDetail.css";
+import Swal from "sweetalert2";
 
-//ItemDetail recibe los datos del producto encontrado por id previamente y los muestra
-
-const ItemDetail = ({ item }) => {
-  const onAdd = (qty) => {
+const handleOnAdd = (quantity) => {
   Swal.fire({
-  icon: 'success',    
-  title: 'Radar Flight',
-  text: `Has agregado ${qty} remera de aviones`,
-  confirmButtonText: 'Genial',
+    icon: "success",
+    title: "Radar Flight",
+    text: `Has agregado ${quantity} productos Radar Flight`,
+    confirmButtonText: "Genial",
+  });
+};
 
-})
-  };
-
-  console.log(item);
+const Item = ({ id, name, image, description, price }) => {
   return (
-    <article className="product-detail">
-      <img src={item.image} alt="" className="product-detail__img" />
-      <div className="product-detail__info">
-        <h2 className="name">{item.name}</h2>
-        <p className="description">{item.description}</p>
-        <ul className="info-grid">
-          <li>Price:</li>
-          <li>${item.price}</li>
-          <li>Size:</li>
-          <li>{item.size}</li>
-          <li>Vendor:</li>
-          <li>{item.vendor}</li>
-          <li>Type:</li>
-          <li>{item.type}</li>
-        </ul>
-        <ItemCount stock={item.stock} initial={1} onAdd={onAdd}
-        />
+    <div className="section-container">
+      <div className="card-container">
+        <div className="card">
+          <img className="card-img-top" src={image} alt={name} />
+          <div className="card-body">
+            <h3 className="card-title">{name}</h3>
+            <p className="card-text">{description}</p>
+            <p className="precio">Precio: ${price}</p>
+          </div>
+        </div>
       </div>
-    </article>
+      <ItemCount stock={10} onAdd={handleOnAdd} />
+    </div>
   );
 };
 
-export default ItemDetail;
+export default Item;

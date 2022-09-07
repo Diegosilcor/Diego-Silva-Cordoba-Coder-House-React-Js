@@ -1,29 +1,26 @@
-import React from 'react';
-import ItemCount from '../ItemCount/ItemCount';
-import Swal from 'sweetalert2';
-import '../Item/Item.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Item.css";
 
-
-const Item = ({ name, image, price, id, stock }) => {
-  const onAdd = (qty) => {
-  Swal.fire({
-  icon: 'success',    
-  title: 'Radar Flight',
-  text: `Has agregado ${qty} remera de aviones`,
-  confirmButtonText: 'Genial',
-
-})
-  };
-
+const Item = ({ id, name, image, description }) => {
   return (
-    <article className="product-card">
-      <img className="product-card__image" src={image} alt="" />
+    <div className="section-container">
+      <div className="card-container">
+        <div className="card">
+          <img className="card-img-top" src={image} alt={name} />
+          <div className="card-body">
+            <h3 className="card-title">{name}</h3>
+            <p className="card-text">{description}</p>
 
-      <h3 className="product-card__name">{name}</h3>
-      <span className="product-card__name">${price}</span>
-
-      <ItemCount stock={stock} onAdd={onAdd} initial={1} />
-    </article>
+            <button className="btn-ver-producto">
+              <Link to={`/detail/${id}`} className="btn-ver-producto">
+                Ver detalle
+              </Link>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

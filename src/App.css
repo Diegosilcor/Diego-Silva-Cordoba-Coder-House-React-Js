@@ -1,0 +1,17 @@
+body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(250, 250, 253);
+  overflow-x: hidden;
+}
+
+
+.App {
+  text-align: center;
+}
+
+
+section{
+  margin: 0;
+  text-align: center;
+}

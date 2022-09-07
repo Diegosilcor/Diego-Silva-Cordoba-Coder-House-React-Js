@@ -1,22 +1,29 @@
+import { useState, useEffect } from "react";
+import { getProductsById } from "../../mock/data";
+import { useParams } from "react-router-dom";
+import ItemDetail from "../ItemDetail/ItemDetail";
 
-import React, { useEffect, useState } from 'react';
-import { getProductById } from '../helpers/getData.js';
-import ItemDetail from '../ItemDetail/ItemDetail';
-import './ItemDetailContainer.css';
+const ItemDetailContainer = () => {
+  const [products, setProducts] = useState();
 
-const ItemDetailContainer = ({ id }) => {
-  const [product, setProduct] = useState(null);
+  const { productsId } = useParams();
 
   useEffect(() => {
-    getProductById(Number(id), setProduct);
-    console.log(product);
-  }, [id]);
+    getProductsById(productsId)
+      .then((products) => {
+        setProducts(products);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [productsId]);
+
   return (
-    <section className="item-detail-container">
-      {product ? <ItemDetail item={product} /> : <p>Obteniendo producto...</p>}
-    </section>
+    <div>
+      <h2>{products?.name}</h2>
+      <ItemDetail {...products} />
+    </div>
   );
 };
 
 export default ItemDetailContainer;
-

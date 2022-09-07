@@ -1,49 +1,45 @@
-import React from "react";
 import { useState } from "react";
-import Swal from "sweetalert2";
-import "../ItemCount/ItemCount.css";
+import "./ItemCount.css";
 
-const ItemCount = ({ onAdd, initial, stock }) => {
-  const [qty, setQty] = useState(initial);
-  
+const Counter = ({ stock, onAdd }) => {
+  const [count, setCount] = useState(1);
 
-  const addProduct = (num) => {
-    setQty(qty + num);
-    
-    
+  const increment = () => {
+    if (count < stock) {
+      setCount(count + 1);
+    }
+  };
+
+  const decrement = () => {
+    if (count > 1) {
+      setCount(count - 1);
+    }
   };
 
   return (
-    <div className="count-container">
-      <div className="count-container__contador">
-        <button
-          className="count-container__button"
-          onClick={() => addProduct(-1)}
-          disabled={qty === initial}
-        >
-          -
-        </button>
-        <span className="count-container__qty">{qty}</span>
-        <button
-          className="count-container__button"
-          onClick={() => addProduct(+1)}
-          disabled={qty === stock}
-        >
-          +
+    <div className="counter-total">
+      <div className="counter-arriba">
+        <div className="btn-menos">
+          <button className="btn-masmenos" onClick={decrement}>
+            -
+          </button>
+        </div>
+        <div className="numero">
+          <p className="numerocounter">{count}</p>
+        </div>
+        <div className="btn-mas">
+          <button className="btn-masmenos" onClick={increment}>
+            +
+          </button>
+        </div>
+      </div>
+      <div className="btn-container">
+        <button className="btn-agregar" onClick={() => onAdd(count)}>
+          Agregar al carrito
         </button>
       </div>
-
-      <button
-        className="button-primary"
-        onClick={() => {
-          onAdd(qty);
-        }}
-        disabled={stock === 0 ? true : null}
-        >
-        Agregar
-      </button>
     </div>
   );
 };
 
-export default ItemCount;
+export default Counter;
