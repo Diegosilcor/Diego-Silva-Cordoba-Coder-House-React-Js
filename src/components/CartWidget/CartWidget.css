@@ -1,0 +1,14 @@
+.material-icons {
+   font-size: 35px;
+   color: rgb(242, 237, 237);
+}
+.cart-number{
+   margin-top: 4px;
+   margin-bottom: 0px;
+   color:white;
+}
+
+.cart-container{
+   display: flex;
+   text-decoration: none;
+}

@@ -1,4 +1,4 @@
-import CardWidget from "../CardWidget/CartWidget";
+import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
 
@@ -9,18 +9,24 @@ const Navbar = () => {
         <div className="navbar-container">
           <div className="img-container">
             {/* <Link to='/'>
-                                <img src="https://acortar.link/YbukCY" alt="Logo avion" />
-                            </Link> */}
+                                <img src="https://acortar.link/YbukCY" alt="Logo" />
+              </Link> */}
           </div>
           <div className="ul-container">
             <ul className="list">
+              <Link to="#" className="btn-nav">
+                Home
+              </Link>
+              <Link to="#" className="btn-nav">
+                Nosotros
+              </Link>
               <Link to="/category/remeras" className="btn-nav">
                 Remeras
               </Link>
               <Link to="/category/relojes" className="btn-nav">
                 Relojes
               </Link>
-              <CardWidget />
+              <CartWidget />
             </ul>
           </div>
         </div>
