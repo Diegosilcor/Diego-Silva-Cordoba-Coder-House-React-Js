@@ -11,7 +11,7 @@ const Cart = () => {
     if(totalQuantity === 0) {
         return (
             <p className='nada-carrito'>No tenés ningun producto en el carrito.
-            ¿Qué estás esperando?
+                ¿Qué estás esperando?
             </p>
         )
     }

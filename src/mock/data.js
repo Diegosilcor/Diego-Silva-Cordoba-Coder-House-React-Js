@@ -8,7 +8,6 @@ const products = [
       "Tiene un gran diseño de calidad que refleja la originalidad del estampado",
     stock: 10,
     size: "XL",
-    vendor: "Primark",
     category: "remeras",
   },
   {
@@ -19,7 +18,6 @@ const products = [
     description: "Diseño de avion monomotor de la segunda guerra mundial",
     stock: 5,
     size: "S",
-    vendor: "Primark",
     category: "remeras",
   },
   {
@@ -31,7 +29,6 @@ const products = [
       "Diseño del avion despegando sobre una pista, reflejando el airborne",
     stock: 18,
     size: "L",
-    vendor: "Primark",
     category: "remeras",
   },
   {
@@ -42,12 +39,11 @@ const products = [
     description: "Diseño del avion y la luna surcando los aires",
     stock: 11,
     size: "M",
-    vendor: "Primark",
     category: "remeras",
   },
   {
     id: "5",
-    name: "Relojr G Shock",
+    name: "Reloj G Shock",
     price: 250,
     image: "https://acortar.link/siz74B",
     description: "Diseño resistente para aventuras",
