@@ -1,40 +1,41 @@
-import { useState, useEffect } from "react";
-
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
-import { getDocs, collection, query, where } from 'firebase/firestore';
-import { database } from '../../firebaseConfig';
+import { getRopa } from "../../services/Firestore";
+import { useAsync } from "../../Hooks/useAsync";
+import BeatLoader from 'react-spinners/BeatLoader';
 
-const ItemListContainer = ( { saludo } ) => {
+const ItemListContainer = ({ saludo }) => {
 
-    const [products, setProducts] = useState([])
+  const { categoryId } = useParams();
 
-    const { categoryId } = useParams();
+  const getRopaFromFirestore = () => getRopa(categoryId)
 
-    useEffect(() => {
+  const { data, error, isLoading } = useAsync(getRopaFromFirestore, [categoryId]);
 
-        const collectionRef = !categoryId ? collection(database, 'productos') : query(collection(database, 'productos'), where('category', '==', categoryId))
+  if (isLoading) {
+   
+    return  <>
+            <BeatLoader color="#0a06e2" size={30} />
+            </>
+}
 
-        getDocs(collectionRef).then(response => {
-            console.log(response)
-            const productsAdapted = response.docs.map(doc => {
-                const data = doc.data()
-                return { id: doc.id, ...data};
-            })
-            setProducts(productsAdapted)
-             }).catch(error => {
-                console.log(error)
-            });
-          }, [categoryId])
+if(error) {
+    return <h1>Hubo un error</h1>
+}
 
+if(data.length === 0) {
+    return categoryId ? <h1>No hay productos en la categoría {categoryId}</h1> : <h1>No hay productos disponibles</h1>
+}
+  
   return (
     <>
       <h2>{saludo}</h2>
       <div>
-        <ItemList products={products} />
+        <ItemList products={data} />
       </div>
     </>
   );
 };
+
 
 export default ItemListContainer;

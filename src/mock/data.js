@@ -77,6 +77,42 @@ const products = [
     stock: 8,
     category: "relojes",
   },
+  {
+    id: "9",
+    name: "Campera roja",
+    price: 350,
+    image: "https://acortar.link/yaAfYz",
+    description: "Campera ideal y liviana para otoño-invierno",
+    stock: 5,
+    category: "camperas",
+  },
+  {
+    id: "10",
+    name: "Campera azul",
+    price: 450,
+    image: "https://acortar.link/II58dS",
+    description: "Diseño atractivo y deportivo",
+    stock: 10,
+    category: "camperas",
+  },
+  {
+    id: "11",
+    name: "Campera azul con rojo",
+    price: 550,
+    image: "https://acortar.link/Zm2Yql",
+    description: "Diseño informal ideal para realizar actividades fisicas",
+    stock: 9,
+    category: "camperas",
+  },
+  {
+    id: "12",
+    name: "Campera con estampados",
+    price: 650,
+    image: "https://acortar.link/c1uUsn",
+    description: "Diseño perfecto para adolescentes",
+    stock: 12,
+    category: "camperas",
+  },
 ];
 
 export const getProducts = () => {

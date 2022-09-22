@@ -40,15 +40,11 @@ h1{
     border: none;
     transition: .5s;
     color: white;
+   }
 
-  
-   }
-   
-   
-  .btn-nav:hover {
-     background-color: rgb(19, 1, 1);
-   }
-   
-  .btn-nav:active {
-     background-color:rgb(184, 184, 184);
-   }
+.btn-nav:hover {
+    background-color: rgb(19, 1, 1);
+}
+.btn-nav:active {
+  background-color:rgb(184, 184, 184);
+  }

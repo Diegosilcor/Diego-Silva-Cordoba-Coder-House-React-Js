@@ -8,23 +8,20 @@ const Navbar = () => {
       <nav className="navbar">
         <div className="navbar-container">
           <div className="img-container">
-            {/* <Link to='/'>
-                                <img src="https://acortar.link/YbukCY" alt="Logo" />
-              </Link> */}
           </div>
           <div className="ul-container">
             <ul className="list">
               <Link to="#" className="btn-nav">
                 Home
               </Link>
-              <Link to="#" className="btn-nav">
-                Nosotros
-              </Link>
               <Link to="/category/remeras" className="btn-nav">
                 Remeras
               </Link>
               <Link to="/category/relojes" className="btn-nav">
                 Relojes
+              </Link>
+                <Link to="/category/camperas" className="btn-nav">
+                Camperas
               </Link>
               <CartWidget />
             </ul>

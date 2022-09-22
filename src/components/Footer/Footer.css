@@ -1,9 +1,13 @@
-/* .footer {
-    background-color:rgb(13, 12, 12);
-  }  
+.footer {
+    height: 50px;
+    background-color: rgb(210, 210, 216);
+  }
+    
   .footer-container{
     display: flex;
     max-width: 1000px; 
     margin: 0 auto;
     justify-content: center;
-  } */
+    bottom: 0;
+  }
+

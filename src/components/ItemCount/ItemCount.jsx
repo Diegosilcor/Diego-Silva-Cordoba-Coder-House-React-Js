@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./ItemCount.css";
 
-const Counter = ({ stock, onAdd }) => {
+const ItemCount = ({ stock, onAdd }) => {
   const [count, setCount] = useState(1);
 
   const increment = () => {
@@ -42,4 +42,4 @@ const Counter = ({ stock, onAdd }) => {
   );
 };
 
-export default Counter;
+export default ItemCount;

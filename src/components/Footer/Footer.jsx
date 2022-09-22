@@ -9,10 +9,9 @@ const Footer = () => {
 
             <footer className="footer">
                 <div className="footer-container">
-                    {/* <ul className="list">
-                                    <button className="btn-nav">Contacto</button>
-                                    <button className="btn-nav">Preguntas frecuentes</button>
-                    </ul> */}
+                    <ul className="list">
+                                 <p>Copyright © 2022.Todos los derechos reservados. Radar flight</p>
+                    </ul>
                 </div>
             </footer>
 
