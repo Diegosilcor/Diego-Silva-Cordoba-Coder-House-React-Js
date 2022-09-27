@@ -3,7 +3,7 @@
 
 ## CARACTERISTICA DEL PROYECTO
 
-- El proyecto trata sobre la simulación de un e-commerce de venta de ropa con características deportivas e informales
+- El proyecto trata sobre la simulación de un e-commerce de venta de ropa con diseños deportivos e informales
 
 ## LIBRERIAS UTILIZADAS
 -  [React Router Dom](https://reactrouter.com/en/main "Heading link") Libreria para navegacion y manejos de rutas entre los distintos componentes.
