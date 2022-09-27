@@ -1,30 +1,37 @@
-## E-COMMERCE
+# E-COMMERCE RADAR FLIGHT
+![](public/image.readme.png)
 
-### The project deals with the simulation of an e-commerce for the sale of clothing with sports and informal characteristics
+## CARACTERISTICA DEL PROYECTO
 
-## BROWSING
+- El proyecto trata sobre la simulación de un e-commerce de venta de ropa con características deportivas e informales
 
-*The different routes that exist so far consist of:
-
-*A directory '/' that shows the home of the page, where you can see the list of all the products (ItemListContainer)
-
-*A 'category/id' directory that displays the results of filtering the item list into three different categories (same ItemListContainer component reused)
-
-*A 'detail/id' directory which can be accessed by pressing the "view detail" button on the cards. This action shows us the ItemDetailContainer component, where you can see the detail of any of the chosen cards.
-
-## INSTALLATION
-
-git clone https://github.com/Diegosilcor/Diego-Silva-Cordoba-Coder-House-React-Js.git
-##
-##
-``npm install``
-##
-``npm start``
+## LIBRERIAS UTILIZADAS
+-  [React Router Dom](https://reactrouter.com/en/main "Heading link") Libreria para navegacion y manejos de rutas entre los distintos componentes.
+- [React Spinner](https://www.davidhu.io/react-spinners/ "Heading link") Libreria que permite mostrar al usuario el efecto de carga en la pagina o aplicacion.
+- [React Icons](https://react-icons.github.io/react-icons/ "Heading link") Libreria tiene como objetivo añadir iconos, en este caso la utilize para el carrito de compras.
+- [React Bootstrap](https://react-bootstrap.github.io/ "Heading link") Libreria que utilize para el formulario de compra.
+- [Firebase](https://firebase.google.com/ "Heading link") Base de datos adonde se agregaron los productos y orders del ecommerce.
 
 
 
-## AUTHOR:
-### Diego Ignacio Silva Cordoba
+## INSTALACION
 
-## COURSE
-### React Js de Coder House
+- ``git clone`` https://github.com/Diegosilcor/Diego-Silva-Cordoba-Coder-House-React-Js.git
+
+- ``npm install``
+
+- ``npm start``
+
+
+
+## AUTOR:
+-  Diego Ignacio Silva Cordoba
+
+## CURSO
+- React Js de Coder House
+
+## DEPLOY PROYECTO
+
+- [E commerce Radar Flight](diego-silva-cordoba-coder-house-react-js-b3wn.vercel.app
+ "Heading link") Deploy realizado en Vercel.
+
