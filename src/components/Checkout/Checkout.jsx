@@ -12,14 +12,15 @@ import {
 } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import Form from "../Form/Form";
-import BeatLoader from 'react-spinners/BeatLoader';
+import BeatLoader from "react-spinners/BeatLoader";
 
 const Checkout = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const [newOrder, setNewOrder] = useState();
 
-  const { cart, getQuantity, getTotal, clearCart, buyer } = useContext(CartContext);
+  const { cart, getQuantity, getTotal, clearCart, buyer } =
+    useContext(CartContext);
 
   const goBackHome = useNavigate();
 
@@ -28,9 +29,8 @@ const Checkout = () => {
   const total = getTotal();
 
   const createOrder = async () => {
-
     setIsLoading(true);
-    
+
     try {
       const newOrder = {
         buyer,
@@ -89,22 +89,22 @@ const Checkout = () => {
   };
 
   if (isLoading) {
-    return <>
-                    <BeatLoader color="#0a06e2" size={30} />
-                </>
-    
+    return (
+      <>
+        <BeatLoader color="#0a06e2" size={30} />
+      </>
+    );
   }
 
   if (newOrder) {
-    return <h2>¡Orden generada correctamente!</h2>
+    return <h2>¡Orden generada correctamente!</h2>;
   }
-  
+
   return (
     <>
-      <Form createOrder={createOrder}/>
+      <Form createOrder={createOrder} />
     </>
   );
-  
 };
 
 export default Checkout;

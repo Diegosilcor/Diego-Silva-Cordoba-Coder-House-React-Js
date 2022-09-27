@@ -1,17 +1,30 @@
-## ECOMMERCE
-### El proyecto trata sobre la simulacion de un ecommerce de venta de indumentaria con caracteristicas aeronauticas.
+## E-COMMERCE
 
-## NAVEGANDO
-*Las diferentes rutas que existen hasta ahora consisten en:
+### The project deals with the simulation of an e-commerce for the sale of clothing with sports and informal characteristics
 
-*Un directorio '/' que muestra la home de la página, donde se puede ver el listado de todos los productos (ItemListContainer)
+## BROWSING
 
-*Un directorio 'category/id' que muestra los resultados de filtrar la lista de artículos en tres diferentes categorías (el mismo componente ItemListContainer reutilizado)
+*The different routes that exist so far consist of:
 
-*Un directorio 'detail/id' al cual se puede acceder presionando el botón "ver detalle" en las tarjetas. Dicha acción nos muestra el componente ItemDetailContainer, donde se podrá ver el detalle de cualquiera de las tarjetas elegidas.
+*A directory '/' that shows the home of the page, where you can see the list of all the products (ItemListContainer)
 
-## AUTOR:
+*A 'category/id' directory that displays the results of filtering the item list into three different categories (same ItemListContainer component reused)
+
+*A 'detail/id' directory which can be accessed by pressing the "view detail" button on the cards. This action shows us the ItemDetailContainer component, where you can see the detail of any of the chosen cards.
+
+## INSTALLATION
+
+git clone https://github.com/Diegosilcor/Diego-Silva-Cordoba-Coder-House-React-Js.git
+##
+##
+``npm install``
+##
+``npm start``
+
+
+
+## AUTHOR:
 ### Diego Ignacio Silva Cordoba
 
-## CURSO
+## COURSE
 ### React Js de Coder House
